@@ -1,7 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '.';
-import { Prisma, type Ticket } from '@prisma/client';
 
+import { type NewTicketInput } from 'src/dto/newTicket.input';
+import { ReadAllArgs } from 'src/dto/readAll.args';
+import { Ticket } from 'src/models/ticket';
+
+/**
 @Injectable()
 export class TicketService {
     constructor(private prisma: PrismaService) {}
@@ -46,4 +49,24 @@ export class TicketService {
             where,
         });
     } 
+}
+*/
+
+@Injectable()
+export class TicketService {
+    async create(data: NewTicketInput) {
+        return {} as Ticket;
+    }
+
+    async readById(id: string): Promise<Ticket> {
+        return {} as Ticket;
+    }
+
+    async readAll(args: ReadAllArgs): Promise<Array<Ticket>> {
+        return [] as Array<Ticket>
+    }
+
+    async remove(id: string): Promise<boolean> {
+        return true;
+    }
 }

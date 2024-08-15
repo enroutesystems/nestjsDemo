@@ -1,3 +1,4 @@
+/**
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { Ticket, TicketType } from '@prisma/client';
 import { TicketService } from 'src/services/ticket';
@@ -35,3 +36,4 @@ export class AppController {
     return this.TicketTypeService.create(data);
   }
 }
+*/

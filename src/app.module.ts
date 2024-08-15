@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './controller';
 import { TicketService } from './services/ticket';
 import { TicketTypeService } from './services/ticketType';
 import { PrismaService } from './services';
