@@ -7,7 +7,8 @@ import {
   ApolloDriver,
   type ApolloDriverConfig
 } from '@nestjs/apollo';
-import { TicketResolver } from './resolver';
+import { TicketTypeResolver } from './resolver/TicketType';
+import { TicketResolver } from './resolver/Ticket';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { TicketResolver } from './resolver';
   ],
   //controllers: [AppController],
   providers: [
+    TicketTypeResolver,
     TicketResolver,
     PrismaService,
     TicketService,

@@ -1,6 +1,5 @@
-import { Field, InputType } from '@nestjs/graphql';
+import { Field, InputType, Int } from '@nestjs/graphql';
 import { Ticket as TicketT } from '@prisma/client';
-import { Ticket } from 'src/models/ticket';
 
 // Id is autoincrementa so is not required
 type TicketWithoutId = Omit<TicketT, 'id'>;
@@ -16,9 +15,9 @@ export class NewTicketInput implements TicketWithoutId {
     @Field({ nullable: true})
     severity: number;
 
-    @Field()
+    @Field(type => String)
     title: string;
 
-    @Field(type => Ticket)
+    @Field(type => Int)
     type: number;
 }

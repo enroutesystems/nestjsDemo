@@ -16,9 +16,9 @@ export class Ticket implements TicketT {
     @Field({ nullable: true  })
     severity: number;
 
-    @Field()
+    @Field(type => String)
     title: string;
 
-    @Field(type => TicketType)
+    @Field(type => Int)
     type: number;
 }
