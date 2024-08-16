@@ -1,5 +1,5 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { TicketType as TicketTypeT, type Ticket as TicketT } from '@prisma/client';
+import { type Ticket as TicketT } from '@prisma/client';
 import { TicketType } from './ticketType';
 
 @ObjectType()
@@ -19,6 +19,6 @@ export class Ticket implements TicketT {
     @Field(type => String)
     title: string;
 
-    @Field(type => Int)
+    @Field(type => TicketType)
     type: number;
 }
